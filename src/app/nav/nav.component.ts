@@ -6,5 +6,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent {
-
+  linkItems = [
+    {
+      name: 'About Me',
+      section: 'about',
+      class: 'active'
+    },
+    {
+      name: 'Skillset',
+      section: 'skillset',
+      class: ''
+    },
+    {
+      name: 'My Work',
+      section: 'myWork',
+      class: ''
+    },
+  ]
+  public navigateToSection(section: string) {
+    window.location.hash = '';
+    window.location.hash = section;
+}
 }

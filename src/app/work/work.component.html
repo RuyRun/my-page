@@ -1,0 +1,14 @@
+<img src="assets/images/{{ work.image }}" alt="" [class.img-right]="swapItems">
+<div class="descripton" [class.align-end]="swapItems">
+    <h4>{{ work.name}}</h4>
+    <div class="languages">
+        <p *ngFor="let lang of work.languages"> {{ lang }}</p>
+    </div>
+
+    <p class="description-text">{{ work.description }}</p>
+    <div>
+        <div class="button">
+            Github
+        </div>
+    </div>
+</div>

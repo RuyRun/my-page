@@ -1,0 +1,9 @@
+<div id="skillset">
+    <h3>Skillset</h3>
+    <div class="skill-container">
+        <div class="skill-box" *ngFor="let item of skillset">
+            <img src="assets/images/{{ item.icon}}" alt="">
+            <p>{{ item.skill }}</p>
+        </div>
+    </div>
+</div>

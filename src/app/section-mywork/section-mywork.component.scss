@@ -1,0 +1,51 @@
+#myWork {
+    margin: 0 12%;
+    position: relative;
+    .headline {
+        padding-top: 111px;
+        .ellipse-top {
+            position: absolute;
+            top: 50px;
+            left: 563px;
+        }
+
+        .ellipse-right {
+            position: absolute;
+            top: 200px;
+            right: 100px;
+        }
+
+        h3 {
+            color: var(--font-color, #5988FF);
+            font-size: 96px;
+            font-family: Baloo;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%;
+            letter-spacing: 0.96px;
+        }
+
+        p {
+            width: 673px;
+            font-size: 23px;
+            line-height: 120%;
+            margin-bottom: 102px;
+        }
+    }
+    app-work {
+       display: flex;
+       flex-direction: row;
+       margin-bottom: 60px;       
+    }
+    
+}
+.swap-items {
+    flex-direction: row-reverse !important;
+    img {
+        margin-left: 24px;
+    }
+    .descripton {
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+    }
+  }

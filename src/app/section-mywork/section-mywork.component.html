@@ -1,0 +1,9 @@
+<div id="myWork">
+    <div class="headline">
+        <img src="assets/images/ellipse-7.svg" class="ellipse-top">
+        <img src="assets/images/ellipse-5.svg" class="ellipse-right">
+        <h3>My work</h3>
+        <p>this page is a sample of my work - please feel free to try them out.</p>
+    </div>
+    <app-work *ngFor="let item of myworks; let i = index" [work]="item" [ngClass]="{'swap-items': i % 2 === 1}" [swapItems]="i % 2 === 1"></app-work>
+</div>

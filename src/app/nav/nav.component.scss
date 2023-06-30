@@ -1,0 +1,38 @@
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 36px;
+    margin-right: 83px;
+    margin-top: 24px;
+    
+
+    .nav-items {
+        width: 120px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        a {
+            width: max-content;
+            font-size: 23px;
+            color: var(--font-color);
+
+            &:hover {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .active {
+        font-weight: 700;
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: -6px;
+                width: 50%;
+                left: 0;
+                border-top: 3px solid var(--font-color);
+            }
+    }
+
+}
