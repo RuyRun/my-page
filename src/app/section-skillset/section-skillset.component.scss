@@ -17,6 +17,7 @@
     .skill-container {
         display: flex;
         flex-wrap: wrap;
+        margin-bottom: 93px;
 
         .skill-box {
             margin-top: 32px;
@@ -26,7 +27,6 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            cursor: pointer;
 
             p {
                 width: 75px;

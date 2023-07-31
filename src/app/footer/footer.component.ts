@@ -12,4 +12,9 @@ export class FooterComponent {
   openDialog(): void {
     this.dialog.open(ImpressumComponent, {});
   }
+
+  public navigateToSection(section: string) {
+    window.location.hash = '';
+    window.location.hash = section;
+  }
 }

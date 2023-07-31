@@ -6,7 +6,7 @@
   </div>
   <nav>
     <div class="nav-items" *ngFor="let item of linkItems">
-      <a class="nav-link" ngClass="{{ item.class }}" aria-current="page" (click)="navigateToSection(item.section)">{{
+      <a class="nav-link" [ngClass]="{ 'active': item.section === selectedLink }" aria-current="page" (click)="navigateToSection(item.section)">{{
         item.name }}</a>
     </div>
   </nav>

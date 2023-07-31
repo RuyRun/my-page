@@ -34,7 +34,6 @@ nav {
             position: absolute;
             bottom: -6px;
             width: 50%;
-            left: 0;
             border-top: 3px solid var(--font-color);
         }
     }
@@ -136,7 +135,7 @@ header {
 }
 @media (max-width: 1110px) {
     header {
-        right: 11px !important;
+        right: 21px !important;
         .menu-icon {
             display: block;
         }

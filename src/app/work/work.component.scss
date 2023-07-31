@@ -7,7 +7,6 @@ img {
     height: auto;
     &:hover {
         transform: translate(-20px, -20px) scale(1.1);
-
         cursor: pointer;
     }
 }
@@ -51,15 +50,7 @@ h4 {
 
         
     }
-    .button, .button-live-test {
-        a {
-            text-decoration: none;
-            color: black;
-            &:visited {
-                color: black;
-            }
-        }
-    }
+    
 }
 
 .img-right {

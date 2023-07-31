@@ -13,4 +13,8 @@ export class WorkComponent implements OnInit {
   }
   @Input() work!:Works;
   @Input() swapItems: boolean = false;
+  
+  openInNewTab(url: string){
+    window.open(url, "_blank");
+}
 }

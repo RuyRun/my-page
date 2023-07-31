@@ -10,7 +10,7 @@ export class NavComponent {
     {
       name: 'About Me',
       section: 'about',
-      class: 'active'
+      class: ''
     },
     {
       name: 'Skillset',
@@ -23,13 +23,21 @@ export class NavComponent {
       class: ''
     },
   ]
+  selectedLink: string | null = null;
   open:boolean =false
   public navigateToSection(section: string) {
+    this.selectedLink = section;
+    console.log(this.selectedLink);
+    
     window.location.hash = '';
     window.location.hash = section;
   }
 
   openMenu() {
     this.open = !this.open
+  }
+
+  setActiveClass() {
+
   }
 }

@@ -35,9 +35,9 @@ export class SectionMyworkComponent {
       name: 'My Website',
       image: '/work/myWebseite.png',
       website: 'https://www.kevinwyatt.de/',
-      github: '#',
+      github: 'https://github.com/RuyRun/my-page',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-      languages: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase']
+      languages: ['Angular', 'TypeScript', 'HTML', 'SCSS']
     },
   ]
 }
