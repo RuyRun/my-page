@@ -26,7 +26,7 @@
         }
 
         p {
-            width: 673px;
+            max-width: 673px;
             font-size: 23px;
             line-height: 120%;
             margin-bottom: 102px;
@@ -34,7 +34,6 @@
     }
     app-work {
        display: flex;
-       flex-direction: row;
        margin-bottom: 60px;       
     }
     
@@ -47,5 +46,52 @@
     .descripton {
         justify-content: flex-start !important;
         align-items: flex-start !important;
+    }
+  }
+
+  @media (max-width: 1250px) {
+    #myWork {
+        .headline {
+            .ellipse-top {
+                height: 82px;
+                left: unset;
+                right: 0;
+            }
+            .ellipse-right{
+                height: 102px;
+                top: 250px;
+            }
+            p {
+                margin-bottom: 140px;
+            }
+        }
+    }
+    app-work {
+        flex-direction: column;
+    }
+    .swap-items {
+        flex-direction: column !important;
+        img {
+            margin-left: 0px;
+        }
+    }
+  }
+
+  @media(max-width: 1110px) {
+    #myWork {
+        .headline {
+            .ellipse-top {
+                top: 12px;
+            }
+            .ellipse-right {
+                right: 0;
+            }
+            h3 {
+                font-size: 64px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
     }
   }

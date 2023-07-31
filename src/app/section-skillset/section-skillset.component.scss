@@ -1,5 +1,5 @@
 #skillset {
-    height: 632px;
+    height: auto;
     background: linear-gradient(131deg, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
     display: flex;
     flex-direction: column;
@@ -27,6 +27,7 @@
             justify-content: center;
             align-items: center;
             cursor: pointer;
+
             p {
                 width: 75px;
                 text-align: center;
@@ -36,10 +37,12 @@
                 font-family: Montserrat;
                 line-height: 120%;
             }
+
             &:hover {
                 img {
                     transform: translate(5px, -5px);
                 }
+
                 p {
                     font-weight: 700;
                 }
@@ -47,4 +50,15 @@
         }
     }
 
+}
+
+@media(max-width: 1110px) {
+    #skillset {
+        padding: 0 12% 16px;
+
+        .skill-container {
+            gap: 16px;
+            justify-content: center;
+        }
+    }
 }

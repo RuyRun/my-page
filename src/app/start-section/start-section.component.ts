@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./start-section.component.scss']
 })
 export class StartSectionComponent {
-
+  public navigateToSection(section: string) {
+    window.location.hash = '';
+    window.location.hash = section;
+  }
 }

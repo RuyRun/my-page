@@ -23,8 +23,13 @@ export class NavComponent {
       class: ''
     },
   ]
+  open:boolean =false
   public navigateToSection(section: string) {
     window.location.hash = '';
     window.location.hash = section;
-}
+  }
+
+  openMenu() {
+    this.open = !this.open
+  }
 }

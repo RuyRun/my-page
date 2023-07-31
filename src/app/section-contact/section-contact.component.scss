@@ -1,7 +1,7 @@
 #contact {
-    height: 746px;
+    height: auto;
     background: linear-gradient(180deg, #FFF 0%, #EAF0FF 100%);
-    padding: 0 12%;
+    padding: 0 12% 32px;
 
     h3 {
         color: var(--font-color, #5988FF);
@@ -12,8 +12,14 @@
 
     .contact-container {
         display: flex;
-
+        width: 100%;
         .left {
+            position: relative;
+            img {
+                position: absolute;
+                left: 25%;
+                bottom: 0;
+            }
             .headline-text {
                 color: var(--font-color, #5988FF);
                 font-size: 32px;
@@ -44,13 +50,26 @@
         }
 
         .right {
+            display: flex;
+            padding-right: 55px;
+            justify-content: flex-end;
+            position: relative;
+            width: 100%;
+            img {
+                position: absolute;
+                bottom: 0px;
+                right: -158px;
+            }
             form {
                 display: flex;
                 flex-direction: column;
                 gap: 35px;
+                width: 100%;
+                align-items: flex-end;
                 .input-box {
                     position: relative;
-                    width: 500px;
+                    max-width: 545px;
+                    width: 100%;
                     input, textarea {
                         display: flex;
                         width: 100%;
@@ -64,6 +83,13 @@
                         outline: none;
                         transition: 0.5s;
                         &:focus {
+                            & ~  span{
+                                transform:translateX(25px) translateY(-17px);
+                                padding: 0px;
+                                background-color: #FCFDFF;
+                            }
+                        }
+                        &:valid {
                             & ~  span{
                                 transform:translateX(25px) translateY(-17px);
                                 padding: 0px;
@@ -94,5 +120,68 @@
             }
         }
     }
+    .go-up {
+        color: var(--font-color);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 10px;
+        border: 2px solid var(--font-color, #5988FF);
+        transition: all 0.2s ease-in;
+        box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        background: none;
+        color: white;
+        background: radial-gradient(91.12% 91.12% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
+        padding: 8px;
+        border-radius: 100%;
+    
+        &:hover {
+            transform: translate(-8px, -8px);
+        }
+    }
 }
 
+.test-classe {
+    & span{
+        transform:translateX(25px) translateY(-17px);
+        padding: 0px !important;
+        background-color: #FCFDFF;
+    }
+}
+@media(max-width: 1110px) {
+    #contact {
+        h3 {
+            font-size: 64px;
+        }
+        .contact-container {
+            flex-direction: column;
+            .left {
+                img {
+                    display: none;
+                }
+                .content-text {
+                    width: fit-content !important;
+                }
+            }
+            .right {
+                padding: 0px;
+                justify-content: flex-start;
+                form {
+                    align-items: flex-start;
+                }
+                img {
+                    right: 0;
+                }
+                .input-box {
+                    width: 87% !important;
+                }
+            }
+        }
+        .go-up {
+            margin-top: 32px;
+            padding: 3px;
+        }
+    }
+}

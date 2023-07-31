@@ -8,17 +8,17 @@
             <img src="assets/images/ellipse-5.svg" alt="">
         </div>
         <div class="right">
-            <form>
-                <div class="input-box">
-                    <input type="text" id="name">
+            <form (submit)="sendMail()" ngNativeValidate>
+                <div class="input-box" #nameFieldBox>
+                    <input required type="text" id="name" #nameField>
                     <span>Your Name</span>
                 </div>
                 <div class="input-box">
-                    <input type="email" id="email">
+                    <input required type="email" id="email" #emailField>
                     <span>Your email</span>
                 </div>
                 <div class="input-box">
-                    <textarea name="message" id="message"></textarea>
+                    <textarea required name="message" id="message" #messageField></textarea>
                     <span>Your message</span>
                 </div>
                 
@@ -26,6 +26,10 @@
                     <button class="button"> Say hello ;&rpar;</button>
                 </div>
             </form>
+            <img src="assets/images/ellipse-6.svg" alt="">
         </div>
+    </div>
+    <div class="go-up">
+        <a href="#"><img src="assets/images/arrow-up.svg" alt=""></a>
     </div>
 </div>

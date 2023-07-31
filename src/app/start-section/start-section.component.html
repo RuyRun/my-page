@@ -1,9 +1,10 @@
 <div class="start-section">
-    <app-nav></app-nav>
+    
     <div class="container">
+        <app-nav></app-nav>
         <div class="left">
-            <img src="assets/images/ellipse-1.png" alt="">
-            <div class="user-picture"></div>
+            <img src="assets/images/portrait.png" alt="">
+            <!-- <div class="user-picture"></div> -->
         </div>
         <div class="right">
             <div class="row">
@@ -16,8 +17,8 @@
                     <p>SCROLL</p>
                     <div class="horizontal-line"></div>
                     <div class="social-media-icons">
-                        <img src="assets/images/github.svg" alt="">
-                        <img src="assets/images/mail.svg" alt="">
+                        <a href="https://github.com/RuyRun" target="_blank" rel="noopener noreferrer"><img src="assets/images/github.svg" alt=""></a>
+                        <img (click)="navigateToSection('contact')" src="assets/images/mail.svg" alt="">
                         <img src="assets/images/linkedin.svg" alt="">
                     </div>
                 </div>

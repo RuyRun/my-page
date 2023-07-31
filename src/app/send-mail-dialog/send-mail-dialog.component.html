@@ -1,0 +1,13 @@
+<h2 mat-dialog-title *ngIf="this.data.status">Your message has been sent</h2>
+<mat-dialog-content *ngIf="this.data.status">
+    <p>Thank you for your message! <br>I will get back to you as soon as possible.</p>
+</mat-dialog-content>
+
+<h2 mat-dialog-title *ngIf="!this.data.status">Failed to send our message</h2>
+<mat-dialog-content *ngIf="!this.data.status">
+    <p>Sorry, an error has occurred.<br>
+        Please try again at a later time</p>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button mat-dialog-close>Close</button>
+  </mat-dialog-actions>

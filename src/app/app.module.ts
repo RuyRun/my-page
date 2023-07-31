@@ -11,6 +11,14 @@ import { SectionSkillsetComponent } from './section-skillset/section-skillset.co
 import { SectionMyworkComponent } from './section-mywork/section-mywork.component';
 import { WorkComponent } from './work/work.component';
 import { SectionContactComponent } from './section-contact/section-contact.component';
+import { FooterComponent } from './footer/footer.component';
+import { FormsModule } from '@angular/forms';
+import {MatDialogModule} from '@angular/material/dialog';
+import { SendMailDialogComponent } from './send-mail-dialog/send-mail-dialog.component';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import { HttpClientModule } from '@angular/common/http';
+import { ImpressumComponent } from './impressum/impressum.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +29,20 @@ import { SectionContactComponent } from './section-contact/section-contact.compo
     SectionSkillsetComponent,
     SectionMyworkComponent,
     WorkComponent,
-    SectionContactComponent
+    SectionContactComponent,
+    FooterComponent,
+    SendMailDialogComponent,
+    ImpressumComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatButtonModule,
+    HttpClientModule,
+    MatDialogModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

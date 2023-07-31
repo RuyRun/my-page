@@ -1,5 +1,19 @@
-<nav>
+<header>
+  <div class="menu-icon" (click)="openMenu()" [class.close-menu]="open">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <nav>
     <div class="nav-items" *ngFor="let item of linkItems">
-        <a class="nav-link" ngClass="{{ item.class }}" aria-current="page" (click)="navigateToSection(item.section)">{{ item.name }}</a>
+      <a class="nav-link" ngClass="{{ item.class }}" aria-current="page" (click)="navigateToSection(item.section)">{{
+        item.name }}</a>
     </div>
-</nav>
+  </nav>
+</header>
+<div class="nav-mobile" [class.d-none]="!open">
+  <div class="nav-items" *ngFor="let item of linkItems" >
+    <a class="nav-link" ngClass="{{ item.class }}" aria-current="page" (click)="navigateToSection(item.section)" (click)="openMenu()">{{
+      item.name }}</a>
+  </div>
+</div>
